@@ -1756,7 +1756,7 @@ Bracket.Assets = {
 		Color.Size = UDim2.new(0, 20, 0, 10)
 		Color.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Color.Position = UDim2.new(1, 0, 0, 2)
-		Color.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Color.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 		Color.Parent = Colorpicker
 
 		local Gradient = Instance.new("UIGradient")
