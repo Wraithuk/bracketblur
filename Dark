@@ -342,33 +342,36 @@ Bracket.Assets = {
 
 		return Tooltip
 	end,
-	Watermark = function()
-		local Watermark = Instance.new("TextLabel")
-		Watermark.Name = "Watermark"
-		Watermark.Visible = false
-		Watermark.AnchorPoint = Vector2.new(1, 0)
-		Watermark.Size = UDim2.new(0, 61, 0, 18)
-		Watermark.BorderColor3 = Color3.fromRGB(0, 0, 0)
-		Watermark.Position = UDim2.new(1, -18, 0, 18)
-		Watermark.BorderSizePixel = 2
-		Watermark.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
-		Watermark.TextStrokeTransparency = 0.75
-		Watermark.TextSize = 14
-		Watermark.RichText = true
-		Watermark.TextColor3 = Color3.fromRGB(255, 255, 255)
-		-- Watermark.TextYAlignment = Enum.TextYAlignment.Top
-		Watermark.Text = "Watermark"
-		Watermark.FontFace = Font.fromEnum(Enum.Font.SourceSansSemibold)
+Watermark = function()
+	local Watermark = Instance.new("TextLabel")
+	Watermark.Name = "Watermark"
+	Watermark.Visible = true
+	Watermark.AnchorPoint = Vector2.new(1, 0)
+	Watermark.Size = UDim2.new(0, 160, 0, 22)
+	Watermark.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Watermark.Position = UDim2.new(1, -18, 0, 18)
+	Watermark.BorderSizePixel = 2
+	Watermark.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+	Watermark.TextStrokeTransparency = 0.75
+	Watermark.TextSize = 14
+	Watermark.RichText = true
+	Watermark.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Watermark.Text = "Watermark"
+	Watermark.FontFace = Font.fromEnum(Enum.Font.SourceSansSemibold)
 
-		local Stroke = Instance.new("UIStroke")
-		Stroke.Name = "Stroke"
-		Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-		Stroke.LineJoinMode = Enum.LineJoinMode.Miter
-		Stroke.Color = Color3.fromRGB(63, 63, 63)
-		Stroke.Parent = Watermark
+	local Stroke = Instance.new("UIStroke")
+	Stroke.Name = "Stroke"
+	Stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	Stroke.LineJoinMode = Enum.LineJoinMode.Miter
+	Stroke.Color = Color3.fromRGB(63, 63, 63)
+	Stroke.Parent = Watermark
 
-		return Watermark
-	end,
+	local function update(text)
+		Watermark.Text = text
+	end
+
+	return Watermark, update
+end
 	PNContainer = function()
 		local PNContainer = Instance.new("Frame")
 		PNContainer.Name = "PNContainer"
